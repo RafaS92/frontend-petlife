@@ -121,7 +121,7 @@ class Home extends React.Component {
                 <div className="card-body">
                   <button onClick={this.openModal}></button>
                   <ModalBasic
-                    ref={(node) => {
+                    href={(node) => {
                       this.modal = node;
                     }}
                   />
@@ -150,7 +150,7 @@ class Home extends React.Component {
                 <div className="card-body">
                   <button onClick={this.openModal}></button>
                   <ModalSilver
-                    ref={(node) => {
+                    href={(node) => {
                       this.modal = node;
                     }}
                   />
@@ -177,7 +177,7 @@ class Home extends React.Component {
                 <div className="card-body">
                   <button onClick={this.openModal}></button>
                   <ModalGold
-                    ref={(node) => {
+                    href={(node) => {
                       this.modal = node;
                     }}
                   />
@@ -206,7 +206,7 @@ class Home extends React.Component {
                 <div className="card-body">
                   <button onClick={this.openModal}></button>
                   <ModalPlatinum
-                    ref={(node) => {
+                    href={(node) => {
                       this.modal = node;
                     }}
                   />
