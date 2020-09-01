@@ -14,7 +14,7 @@ export default function ModalCreatebooking(props) {
   const [service, setService] = useState(0);
 
   useEffect(() => {
-    fetch("https://pet-life-api.herokuapp.com/pets", { mode: 'no-cors'})
+    fetch("https://pet-life-api.herokuapp.com/pets")
       .then(function (response) {
         return response.json();
       })
