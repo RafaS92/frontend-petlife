@@ -31,11 +31,7 @@ export default function ModalCreatePet(props) {
 
     let id = parseInt(localStorage.id);
 
-    console.log(pet);
-    // console.log(parseInt(localStorage.id));
-    // localStorage.clear() //to logout
-
-    fetch("http://:3000/pets", {
+    fetch("https://pet-life-api.herokuapp.com/pets", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

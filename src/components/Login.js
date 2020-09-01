@@ -14,20 +14,17 @@ export function Login(props) {
   });
   async function handleSubmit(e) {
     e.preventDefault();
-    let response = await fetch(
-      "https://pet-life-deploy2020.herokuapp.com/login",
-      {
-        credentials: "include",
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          username: user.username,
-          password: user.password,
-        }),
-      }
-    );
+    let response = await fetch("https://pet-life-api.herokuapp.com/login", {
+      credentials: "include",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: user.username,
+        password: user.password,
+      }),
+    });
     let { success, id } = await response.json();
     if (success) {
       localStorage.id = id;
@@ -39,20 +36,17 @@ export function Login(props) {
   }
   async function handleCreate(e) {
     e.preventDefault();
-    let response = await fetch(
-      "https://pet-life-deploy2020.herokuapp.com/users",
-      {
-        credentials: "include",
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          username: new_user.new_username,
-          password: new_user.new_password,
-          address: new_user.new_address,
-          email: new_user.new_email,
-        }),
-      }
-    );
+    let response = await fetch("https://pet-life-api.herokuapp.com/users", {
+      credentials: "include",
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: new_user.new_username,
+        password: new_user.new_password,
+        address: new_user.new_address,
+        email: new_user.new_email,
+      }),
+    });
     let { success, id } = await response.json();
     if (success) {
       props.history.push("/home", id);
@@ -63,14 +57,14 @@ export function Login(props) {
   return (
     <div>
       <Jumbotron className="Jumbotron-card2">
-        <div class="jumbotron jumbotron-fluid">
+        <div className="jumbotron jumbotron-fluid">
           <div className="presentation">
-            <i class="fas fa-paw fa-3x"></i>
+            <i className="fas fa-paw fa-3x"></i>
             <h1>WELCOME TO PET LIFE HOTEL</h1>
             <h3>Please Log in or Sign up</h3>
           </div>
 
-          <div class="container">
+          <div className="container">
             <div className="row row-cols-2 row-cols-md-3">
               <form
                 onSubmit={handleSubmit}
@@ -78,8 +72,8 @@ export function Login(props) {
               >
                 <h1 className="presentation">Log in</h1>
                 <br />
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Username </label>
+                <div className="form-group">
+                  <label htmlFor="exampleInputEmail1">Username </label>
                   <input
                     className="ml-1"
                     type="text"
@@ -90,8 +84,8 @@ export function Login(props) {
                     placeholder="Username"
                   />
                 </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password </label>
+                <div className="form-group">
+                  <label htmlFor="exampleInputPassword1">Password </label>
                   <input
                     className="ml-1"
                     type="password"
@@ -102,7 +96,7 @@ export function Login(props) {
                     placeholder="Password"
                   />
                 </div>
-                <button input="submit" class="btn btn-primary">
+                <button input="submit" className="btn btn-primary">
                   Log in
                 </button>
               </form>
@@ -113,8 +107,8 @@ export function Login(props) {
               >
                 <h1 className="presentation">Sign Up</h1>
                 <br />
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Username </label>
+                <div className="form-group">
+                  <label htmlFor="exampleInputEmail1">Username </label>
                   <input
                     className="ml-1"
                     type="text"
@@ -128,8 +122,8 @@ export function Login(props) {
                     placeholder="Username"
                   />
                 </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password </label>
+                <div className="form-group">
+                  <label htmlFor="exampleInputPassword1">Password </label>
                   <input
                     className="ml-1"
                     type="password"
@@ -143,8 +137,8 @@ export function Login(props) {
                     placeholder="Password"
                   />
                 </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Address</label>
+                <div className="form-group">
+                  <label htmlFor="exampleInputPassword1">Address</label>
                   <input
                     className="ml-1"
                     type="text"
@@ -158,8 +152,8 @@ export function Login(props) {
                     placeholder="Address"
                   />
                 </div>
-                <div class="form-group ml-3">
-                  <label for="exampleInputPassword1">Email </label>
+                <div className="form-group ml-3">
+                  <label htmlFor="exampleInputPassword1">Email </label>
                   <input
                     className="ml-1"
                     type="text"
@@ -173,7 +167,7 @@ export function Login(props) {
                     placeholder="Email"
                   />
                 </div>
-                <button input="submit" class="btn btn-primary">
+                <button input="submit" className="btn btn-primary">
                   Register
                 </button>
               </form>

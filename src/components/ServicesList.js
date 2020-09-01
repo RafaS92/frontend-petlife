@@ -17,10 +17,12 @@ export default class ServiceList extends React.Component {
       <div>
         <NavBar />
         <Jumbotron className="Jumbotron-card2">
-          <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-              <h1 class="display-4">Are you ready for the best experience?</h1>
-              <p class="lead">
+          <div className="jumbotron jumbotron-fluid">
+            <div className="container">
+              <h1 className="display-4">
+                Are you ready for the best experience?
+              </h1>
+              <p className="lead">
                 While we know you’d love to stay home and play with your dog all
                 day, that’s not always possible. That’s why we offer dog
                 daycare. Our daytime guests enjoy playtime with other dogs in a
@@ -56,7 +58,7 @@ export default class ServiceList extends React.Component {
                 <div className="card-body">
                   <button onClick={this.openModal}></button>
                   <ModalBasic
-                    ref={(node) => {
+                    hhref={(node) => {
                       this.modal = node;
                     }}
                   />
@@ -85,7 +87,7 @@ export default class ServiceList extends React.Component {
                 <div className="card-body">
                   <button onClick={this.openModal}></button>
                   <ModalSilver
-                    ref={(node) => {
+                    href={(node) => {
                       this.modal = node;
                     }}
                   />
@@ -112,7 +114,7 @@ export default class ServiceList extends React.Component {
                 <div className="card-body">
                   <button onClick={this.openModal}></button>
                   <ModalGold
-                    ref={(node) => {
+                    href={(node) => {
                       this.modal = node;
                     }}
                   />
@@ -141,7 +143,7 @@ export default class ServiceList extends React.Component {
                 <div className="card-body">
                   <button onClick={this.openModal}></button>
                   <ModalPlatinum
-                    ref={(node) => {
+                    href={(node) => {
                       this.modal = node;
                     }}
                   />
