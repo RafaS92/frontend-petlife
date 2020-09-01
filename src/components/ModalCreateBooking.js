@@ -14,7 +14,7 @@ export default function ModalCreatebooking(props) {
   const [service, setService] = useState(0);
 
   useEffect(() => {
-    fetch("https://pet-life-deploy2020.herokuapp.com/pets")
+    fetch("https://pet-life-api.herokuapp.com/pets", { mode: 'no-cors'})
       .then(function (response) {
         return response.json();
       })
@@ -62,7 +62,7 @@ export default function ModalCreatebooking(props) {
     // console.log(parseInt(localStorage.id));
     // localStorage.clear() //to logout
 
-    fetch("https://pet-life-deploy2020.herokuapp.com/bookings", {
+    fetch("https://pet-life-api.herokuapp.com/bookings", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
